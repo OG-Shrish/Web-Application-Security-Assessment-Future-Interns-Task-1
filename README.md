@@ -1,62 +1,109 @@
-📌 Project Overview
+# Web Application Security Assessment
 
-This project focuses on performing a basic security assessment of a vulnerable web application using industry-standard tools. The goal is to identify common vulnerabilities, analyze their impact, and suggest appropriate remediation techniques based on OWASP Top 10 guidelines.
+A hands-on security assessment of a deliberately vulnerable web application using industry-standard penetration-testing tools and manual testing techniques.
 
-🎯 Objectives
+## Overview
 
-Understand common web vulnerabilities
-Perform automated and manual security testing
-Identify and document security flaws
-Map vulnerabilities to OWASP Top 10
-Suggest remediation techniques
+This project evaluates common web application vulnerabilities through automated scanning and manual security testing.
 
-🛠 Tools Used
+The assessment focuses on identifying vulnerabilities, understanding their security impact, mapping findings to OWASP categories, and documenting remediation strategies.
 
-Kali Linux
-OWASP ZAP
-Burp Suite Community
-DVWA (Damn Vulnerable Web Application)
-Firefox Browser
+## Objectives
 
-🔍 Vulnerabilities Tested
+* Identify common web application vulnerabilities
+* Perform automated vulnerability scanning
+* Perform manual security testing
+* Analyze vulnerability impact
+* Map vulnerabilities to OWASP categories
+* Document remediation recommendations
 
-SQL Injection
-Cross-Site Scripting (XSS)
-Cross-Site Request Forgery (CSRF)
+## Tools Used
 
-⚙️ Methodology
-Automated Testing
-Conducted automated vulnerability scans using OWASP ZAP.
-Identified security issues and generated reports.
+* Kali Linux
+* OWASP ZAP
+* Burp Suite Community Edition
+* DVWA
+* Firefox
+
+## Vulnerabilities Tested
+
+### SQL Injection
+
+Tested application inputs for SQL injection vulnerabilities and analyzed the resulting security impact.
+
+### Cross-Site Scripting
+
+Tested user-controlled input for reflected XSS vulnerabilities.
+
+### Cross-Site Request Forgery
+
+Evaluated application requests for CSRF protection weaknesses.
+
+## Methodology
+
+```text
+Reconnaissance
+      |
+      v
+Automated Scanning
+      |
+      v
 Manual Testing
-Intercepted HTTP requests using Burp Suite.
-Tested input fields with crafted payloads.
-Verified vulnerabilities manually.
+      |
+      v
+Vulnerability Verification
+      |
+      v
+Impact Analysis
+      |
+      v
+OWASP Mapping
+      |
+      v
+Remediation Recommendations
+```
 
-🧪 Sample Payloads
-SQL Injection
-' OR '1'='1
+## Testing Approach
 
-XSS
-<script>alert('XSS')</script>
+### Automated Testing
 
-📊 OWASP Top 10 Mapping
-Vulnerability	OWASP Category
-SQL Injection	A03 – Injection
-XSS	A07 – Cross-Site Scripting
-CSRF	A05 – Security Misconfiguration
+OWASP ZAP was used to identify potential vulnerabilities and generate security findings.
 
-🧠 Key Learnings
+### Manual Testing
 
-Real-world vulnerabilities can be easily exploited if not handled correctly.
-Input validation and sanitization are critical.
-Automated tools help, but manual testing is essential.
+Burp Suite was used to intercept and modify HTTP requests and verify vulnerabilities manually.
 
-📄 Report
+## OWASP Mapping
 
-The complete report with screenshots, findings, and remediation steps is included in the repository.
+| Vulnerability | OWASP Category              |
+| ------------- | --------------------------- |
+| SQL Injection | A03 – Injection             |
+| XSS           | A03 – Injection             |
+| CSRF          | A01 – Broken Access Control |
 
-👤 Author
+## Key Findings
 
-Shrish
-Cyber Security Intern – Future Interns
+The assessment demonstrates the importance of:
+
+* Input validation
+* Output encoding
+* Secure authentication
+* CSRF protection
+* Proper access control
+* Security testing throughout development
+
+## Report
+
+A detailed security assessment report containing screenshots, findings, impact analysis, and remediation recommendations is included in this repository.
+
+## Disclaimer
+
+All testing was performed in an intentionally vulnerable and controlled environment for educational purposes.
+
+Do not perform security testing against systems without explicit authorization.
+
+## Author
+
+**Shrish Ahankari**
+
+Cybersecurity Intern – Future Interns
